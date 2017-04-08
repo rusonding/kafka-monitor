@@ -1,0 +1,7 @@
+[2017-03-23 13:40:07] KafkaClusterUtils.main - ERROR - [KafkaClusterUtils.getLogSize()] - Can't find Leader for Topic and Partition. Exiting
+ [2017-03-23 13:40:08] KafkaClusterUtils.main - ERROR - [KafkaClusterUtils.getLogSize()] - Can't find Leader for Topic and Partition. Exiting
+ [2017-03-23 13:40:08] KafkaClusterUtils.main - ERROR - [KafkaClusterUtils.getLogSize()] - Can't find Leader for Topic and Partition. Exiting
+ [2017-03-23 13:40:09] KafkaClusterUtils.main - ERROR - [KafkaClusterUtils.getLogSize()] - Can't find Leader for Topic and Partition. Exiting
+ [2017-03-23 13:40:09] KafkaClusterUtils.main - ERROR - [KafkaClusterUtils.getLogSize()] - Can't find Leader for Topic and Partition. Exiting
+ [2017-03-23 13:40:11] KafkaClusterUtils.main - ERROR - [KafkaClusterUtils.getLogSize()] - Can't find Leader for Topic and Partition. Exiting
+ 
