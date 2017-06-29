@@ -37,7 +37,7 @@ public class ConsoleConsumerCommand {
     private static Logger LOG = LoggerFactory.getLogger(ConsoleConsumerCommand.class);
 
     public static int useLeaderReplica = -1;
-    public static String brokerList = "172.17.2.25:9092,172.17.2.34:9092";//SystemConfigUtils.getProperty("kafka.broker.list");
+    public static String brokerList = "node1:9092";//SystemConfigUtils.getProperty("kafka.broker.list");
     private static String topic = "__consumer_offsets";
     private static int replicaId = useLeaderReplica;
     private static int fetchSize =1024 * 1024 * 1024;
@@ -50,7 +50,7 @@ public class ConsoleConsumerCommand {
 
     public static void main(String[] args) throws Exception {
         long startingOffset = OffsetRequest.EarliestTime();
-        String group = "bi_useractionlogs_app_flume";
+        String group = "app_flume";
 //        String group = "testConsumer4";
         int partitionId = GroupHashCode.getPartition(group);
         startingOffset = -2;

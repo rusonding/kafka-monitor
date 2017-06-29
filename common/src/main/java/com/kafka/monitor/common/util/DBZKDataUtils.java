@@ -234,9 +234,7 @@ public class DBZKDataUtils
   }
 
   public static void main(String[] args) {
-//    long offset = getConsumerStartingOffsets("bi_useractionlogs_app_flume");
-    String str = getOffsets("testConsumer1", "bi_useractionlogs_app");
-//     str = getOffsets("bi_useractionlogs_app_flume", "bi_useractionlogs_app");
+    String str = getOffsets("testConsumer1", "logs_app");
     System.out.println(str);
   }
 }

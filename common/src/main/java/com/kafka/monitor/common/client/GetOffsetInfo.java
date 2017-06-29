@@ -21,7 +21,7 @@ import java.util.Map;
 */
 public class GetOffsetInfo {
 //    public static final String broker = SystemConfigUtils.getProperty("kafka.broker.list");
-    public static final String broker = "172.17.2.25:9092,172.17.2.34:9092";
+    public static final String broker = "node1:9092";
 
 
     public static List<ConsumerInfoModel> getNewOffsetInfoVersion2() throws Exception {

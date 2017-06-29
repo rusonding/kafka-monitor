@@ -36,7 +36,7 @@ public class KafkaClusterUtils {
     private static ZkConnection zkConnection = new ZkConnection(ZKPoolUtils.zkInfo);
 
     public static void main(String[] args) throws Exception {
-        String topic = "bi_useractionlogs_app";
+        String topic = "logs_app";
     }
 
     public static OffsetZkDomain getOffset(String topic, String group, int partition) {

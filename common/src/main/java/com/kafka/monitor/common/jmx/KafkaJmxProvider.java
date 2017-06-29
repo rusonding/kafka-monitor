@@ -110,10 +110,10 @@ public class KafkaJmxProvider {
     }
 
     public static void main(String[] args) throws Exception {
-        //        String jmxURL = "service:jmx:rmi:///jndi/rmi://172.17.2.34:8888/jmxrmi";
-        //        String jmxURL = "service:jmx:rmi:///jndi/rmi://172.17.2.25:8888/jmxrmi";
+        //        String jmxURL = "service:jmx:rmi:///jndi/rmi://node1:8888/jmxrmi";
+        //        String jmxURL = "service:jmx:rmi:///jndi/rmi://node1:8888/jmxrmi";
 //        String hosts = args[0];
-        String hosts = "172.17.2.25";
+        String hosts = "node1";
         System.out.println(new KafkaJmxProvider().extractMonitorData(hosts));
     }
 }

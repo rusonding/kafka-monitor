@@ -22,7 +22,7 @@ public final class ZKPoolUtils {
 
 	private void initZKPoolUtils() {
 		if (this.zkInfo == null ) {
-			this.zkInfo = "172.17.2.36:2181,172.17.2.34:2181,172.17.2.25:2181";
+			this.zkInfo = "node1:2181";
 		}
 		LOG.info("Initialization ZkClient pool size [" + this.poolSize + "],zk="+this.zkInfo);
 		if (this.poolSize == 0 ) {
@@ -51,7 +51,7 @@ public final class ZKPoolUtils {
 		for (int i = 0; i < this.poolSize; ++i)
 			try {
 				LOG.info("zk info ="+this.zkInfo);
-				this.zkInfo = "172.17.2.36:2181,172.17.2.34:2181,172.17.2.25:2181";
+				this.zkInfo = "node1:2181";
 				ZkSerializer zkSerializer = new ZkClientSerializer();
 //				zkClient = new ZkClient(this.zkInfo, 2147483647, 100000, new SerializableSerializer());
 				zkClient = new ZkClient(this.zkInfo, 2147483647, 100000, zkSerializer);

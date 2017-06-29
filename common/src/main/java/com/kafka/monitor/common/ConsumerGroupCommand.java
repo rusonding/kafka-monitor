@@ -37,10 +37,8 @@ public class ConsumerGroupCommand {
 
     public static void main(String[] args) {
         System.out.println("===========");
-        String brokers = "172.17.2.25:9092,172.17.2.34:9092";
-
-        Map<String, Object> result = describeGroup(brokers, "bi_useractionlogs_app_flume");
-//        Map<String, Object> result = describeGroup(brokers, "testConsumer1");
+        String brokers = "node1:9092";
+        Map<String, Object> result = describeGroup(brokers, "app_flume");
         System.out.println(result);
     }
 

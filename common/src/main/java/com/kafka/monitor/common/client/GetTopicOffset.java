@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class GetTopicOffset {
     public static void main(String[] args) {
-        String  topic = "bi_useractionlogs_app";
+        String  topic = "logs_app";
         List<TopicPartitionOffsetModel> topicPartitionOffset = GetOffsetShellCommand.getTopicPartitionOffset(topic);
         long offset = 0;
         for (TopicPartitionOffsetModel model : topicPartitionOffset) {

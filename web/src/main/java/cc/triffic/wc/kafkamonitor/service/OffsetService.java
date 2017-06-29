@@ -150,7 +150,7 @@ public class OffsetService
   }
 
   public static void main(String[] args) {
-    String logSize = OffsetService.getLogSize("bi_useractionlogs_app", "bi_useractionlogs_app_flume", "localhost");
+    String logSize = OffsetService.getLogSize("logs_app", "logs_app_flume", "localhost");
     System.out.println(logSize);
   }
 }

@@ -21,7 +21,7 @@ import java.util.*;
 public class GetOffsetShellCommand {
 
     private static String  clientId = "GetOffsetShell";
-    private static String  brokerList = "172.17.2.25:9092,172.17.2.34:9092";
+    private static String  brokerList = "node1:9092";
 
     private static int   time = -1;
     private static int  maxWaitMs = 1000;
@@ -29,7 +29,7 @@ public class GetOffsetShellCommand {
 
 
     public static void main(String[] args) {
-        String  topic = "bi_useractionlogs_app";
+        String  topic = "logs_app";
         List<TopicPartitionOffsetModel> topicPartitionOffset = getTopicPartitionOffset(topic);
         System.out.println(topicPartitionOffset);
     }
