@@ -21,7 +21,8 @@ import java.util.*;
 public class GetOffsetShellCommand {
 
     private static String  clientId = "GetOffsetShell";
-    private static String  brokerList = "node1:9092";
+    private static String  brokerList = "ip:9092";
+//    private static String  brokerList = "node1:9092";
 
     private static int   time = -1;
     private static int  maxWaitMs = 1000;

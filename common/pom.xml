@@ -12,6 +12,7 @@
     <artifactId>common</artifactId>
 
     <build>
+        <!--<finalName>kafka-action-log</finalName>-->
         <!--<finalName>kafka-tools</finalName>-->
         <finalName>kafka-jmx</finalName>
         <plugins>
@@ -22,6 +23,7 @@
                 <configuration>
                     <archive>
                         <manifest>
+                            <!--<mainClass>com.kafka.monitor.consumer.ConsumerMonitor</mainClass>-->
                             <!--<mainClass>com.kafka.monitor.common.client.GetTopicOffset</mainClass>-->
                             <mainClass>com.kafka.monitor.common.jmx.KafkaJmxProvider</mainClass>
                         </manifest>

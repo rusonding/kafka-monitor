@@ -3,7 +3,8 @@ package com.kafka.monitor.common.jmx;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.management.*;
+import javax.management.MBeanServerConnection;
+import javax.management.ObjectName;
 import javax.management.remote.JMXConnector;
 import javax.management.remote.JMXConnectorFactory;
 import javax.management.remote.JMXServiceURL;
@@ -11,9 +12,9 @@ import java.io.IOException;
 
 /**
  * kafka version:0.11.0.1
- * Created by lixun on 2017/4/5.
+ * Created by lixun on 2017/10/16.
  */
-public class KafkaJmxProvider {
+public class KafkaJmxProviderV2 {
     protected final Logger LOGGER = LoggerFactory.getLogger(getClass());
     private static final String MESSAGE_IN_PER_SEC = "kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec";//所有的topic的消息速率(消息数/秒)
     private static final String BYTES_IN_PER_SEC = "kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec";//所有的topic的流入数据速率(字节/秒)
@@ -33,8 +34,6 @@ public class KafkaJmxProvider {
 
     private static final String ACTIVE_CONTROLLER_COUNT = "kafka.controller:type=KafkaController,name=ActiveControllerCount";
     private static final String PART_COUNT = "kafka.server:type=ReplicaManager,name=PartitionCount";
-//    private static final String LAG = "kafka.consumer:type=consumer-fetch-manager-metrics,client-id={client-id}";
-//    private static final String LAG = "kafka.consumer:type=consumer-fetch-manager-metrics,client-id=([-.w]+)";
     public String extractMonitorData(String host) throws Exception {
         KafkaRoleInfo monitorDataPoint = new KafkaRoleInfo();
         String jmxURL = "service:jmx:rmi:///jndi/rmi://"+host+":8888/jmxrmi";
@@ -111,9 +110,9 @@ public class KafkaJmxProvider {
     }
 
     public static void main(String[] args) throws Exception {
-        String hosts = args[0];
-//        String hosts = "node1";
-        System.out.println(new KafkaJmxProvider().extractMonitorData(hosts));
+//        String hosts = args[0];
+        String hosts = "ip";
+        System.out.println(new KafkaJmxProviderV2().extractMonitorData(hosts));
     }
 }
 
